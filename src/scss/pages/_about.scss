@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.about {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: $Gap-xl;
+        padding: $Padding-lg;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: $Gap-md;
+
+        p {
+            font-size: $Font-size-md;
+            line-height: 1.6;
+            color: #333;
+            letter-spacing: 0.01em;
+        }
+
+        b {
+            font-weight: $Font-weight-xl;
+            color: $primary-color;
+        }
+    }
+}
+
+.about__container .slider {
+    width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+}

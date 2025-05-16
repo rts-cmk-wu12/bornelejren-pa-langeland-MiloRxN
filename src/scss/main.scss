@@ -1,0 +1,25 @@
+// Main SCSS file - compiles all partials
+
+// 1. Abstracts
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+// 2. Base
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/base';
+
+// 4. Components
+@use 'components/burger-menu';
+@use 'components/image-slider';
+@use 'components/sponsorform';
+@use 'components/sponsorlist';
+
+// 5. Layout
+@use 'layout/footer';
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/grid';
+
+// 6. Pages
+@use 'pages/about';

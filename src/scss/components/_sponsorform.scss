@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use 'sass:color';
+
+.sponsor-form{
+    display: flex;
+    flex-direction: column;
+    gap: $Gap-lg;
+    position: relative;
+
+    background-color: #d9d9d9;
+    padding: $Padding-lg;
+    border-radius: $Border-radius-md;
+
+    label{
+        display: flex;
+        flex-direction: column;
+        gap: $Gap-sm;
+
+        select{
+            padding: $Padding-sm;
+            border-radius: $Border-radius-pill;
+            border: 1px solid #ccc;
+            font-size: $Font-size-md;
+            color: #333;
+        }
+
+        input{
+            padding: $Padding-sm;
+            border-radius: $Border-radius-pill;
+            border: 1px solid #ccc;
+            font-size: $Font-size-md;
+            color: #333;
+        }
+    }
+
+    button{
+        background-color: $primary-color;
+        color: #fff;
+        padding: $Padding-md;
+        border-radius: $Border-radius-pill;
+        border: none;
+        font-size: $Font-size-lg;
+        cursor: pointer;
+
+        &:hover{
+            background-color: color.adjust($primary-color, $lightness: -10%);
+        }
+    }
+
+        .form-message {
+            padding: $Padding-md;
+            border-radius: $Border-radius-md;
+            margin-bottom: $Margin-md;
+            font-weight: $Font-weight-lg;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+    
+            &--success {
+                min-height: 10rem;
+                font-size: $Font-size-md;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                background-color: $primary-color;
+                color: $text-color;
+                border: 1px solid #c3e6cb;
+                padding: $Padding-lg;
+            }
+    
+            &--error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+        }
+    
+        .error-message {
+            color: #721c24;
+            font-size: $Font-size-xs;
+            margin-top: 0.25rem;
+            display: block;
+        }
+}

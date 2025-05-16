@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: $Gap-lg;
+    padding: $Padding-lg;
+
+    @include media(500px){
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        border-radius: $Border-radius-md;
+        overflow: hidden;
+    }
+
+    // For Hompage with Image and Text
+
+    &__item--image {
+
+        object-fit: cover;
+        object-position: center 60%;
+        max-height: 44rem;
+
+        @include media(laptop) {
+            display: none;
+        }
+    }
+
+    &__item--text {
+        padding-inline: $Padding-lg;
+        padding-block: $Padding-md;
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            margin-bottom: $Margin-sm;
+        }
+
+        p {
+            font-size: $Font-size-md;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: $Margin-md;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        b {
+            font-weight: $Font-weight-xl;
+            color: $primary-color;
+        }
+    }
+
+
+    // For about page with slider and text
+    &__item--slider{
+        align-self: center;
+    }
+
+    // For thanks page
+
+    &--thanks{
+        padding: 0;
+    }
+
+}
