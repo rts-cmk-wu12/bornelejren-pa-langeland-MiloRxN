@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $Padding-lg;
+    background-color: $primary-color;
+    color: $text-color;
+
+    &__content {
+            small {
+                font-size: $Font-size-xs;
+            }
+        }
+}

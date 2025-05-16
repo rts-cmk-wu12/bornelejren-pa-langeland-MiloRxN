@@ -1,0 +1,120 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use 'sass:color';
+
+.sponsor-list {
+    padding: $Padding-md;
+    margin-bottom: $Margin-lg;
+
+    h2 {
+        margin-bottom: $Margin-md;
+        font-size: $Font-size-lg;
+        text-align: center;
+    }
+
+    &__filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $Gap-sm;
+        margin-bottom: $Margin-lg;
+    }
+
+    &__filter {
+        padding: $Padding-sm $Padding-md;
+        border: none;
+        border-radius: $Border-radius-pill;
+        background-color: #f5f5f5;
+        cursor: pointer;
+        font-weight: $Font-weight-md;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: color.adjust(#f5f5f5, $lightness: -5%);
+        }
+
+        &--active {
+            background-color: $primary-color;
+            color: $text-color;
+            font-weight: $Font-weight-lg;
+
+            &:hover {
+
+                background-color: color.adjust($primary-color, $lightness: -5%);
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: $Gap-md;
+    }
+
+    &__item {
+        background-color: #f5f5f5;
+        border-bottom: 2px solid #66666644;
+        padding: $Padding-xl;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+        &__details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: $Gap-sm;
+            font-size: $Font-size-md;
+    
+            @include media(450px) {
+                flex-direction: column;
+                align-items: stretch;
+                gap: $Gap-md;
+            }
+        }
+    
+        &__name {
+            font-weight: $Font-weight-xl;
+            flex: 1;
+            text-align: center;
+    
+            @include media(450px) {
+                order: -1;
+                margin-bottom: $Margin-sm;
+            }
+        }
+    
+        &__amount {
+            font-weight: $Font-weight-lg;
+            text-align: right;
+            min-width: 100px;
+    
+            @include media(450px) {
+                text-align: center;
+                min-width: auto;
+            }
+        }
+    
+        &__date {
+            color: #666;
+            min-width: 100px;
+    
+            @include media(450px) {
+                text-align: center;
+                min-width: auto;
+            }
+        }
+
+    &__empty {
+        text-align: center;
+        margin: $Margin-xl 0;
+        font-size: $Font-size-md;
+        color: #666;
+        font-style: italic;
+    }
+}
