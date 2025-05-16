@@ -97,12 +97,14 @@ Har valgt at lave få ændringer i sponsor sidens form så det så pænt ud, da 
 
 ## Vigtigt information
 - Der er ikke nogen aktiv side, da jeg ikke har fået sat den op inden for tidsfristen.
-
 - Projektet er lavet i React og kan derfor ikke åbnes uden at have sat det op med npm og node.js
+
+
+## forbedringer og fremtidige tiltag
+Jeg må ærligt erkende, at der stadig er flere forbedringsmuligheder. Navigationsmenuen fremstår ikke så æstetisk tiltalende som planlagt, og om os-siden følger ikke fuldstændig det originale design grundet tekniske udfordringer med at implementere den planlagte layout-struktur.
+
+## Udfordringer
+En særlig udfordring var integrationen af logoet på en konsistent og æstetisk måde. Efter flere forsøg besluttede jeg at begrænse logoet til headeren for at undgå, at det tager for meget opmærksomhed på de enkelte sider og forstyrrer det overordnede design. Dette kompromis gav efter min vurdering det mest balancerede resultat, selvom det afviger fra de oprindelige opgave beskrivelser.
 
 ## Konklusion
 Projektet har resulteret i et moderniseret og mere brugervenligt design, som gør det nemmere for besøgende at navigere og finde relevant information. Siden er blevet optimeret til at være responsiv og tilgængelig på forskellige enheder, hvilket var et centralt mål for redesignet.
-
-Jeg må dog ærligt erkende, at der stadig er flere forbedringsmuligheder. Navigationsmenuen fremstår ikke så æstetisk tiltalende som planlagt, og om os-siden følger ikke fuldstændig det originale design grundet tekniske udfordringer med at implementere den planlagte layout-struktur.
-
-En særlig udfordring var integrationen af logoet på en konsistent og æstetisk måde. Efter flere forsøg besluttede jeg at begrænse logoet til headeren for at undgå, at det tager for meget opmærksomhed på de enkelte sider og forstyrrer det overordnede design. Dette kompromis gav efter min vurdering det mest balancerede resultat, selvom det afviger fra de oprindelige opgave beskrivelser.
